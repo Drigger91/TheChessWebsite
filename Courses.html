@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+<style>
+       *{font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        }
+        body{
+            background-color: black;
+            display: flexbox;
+        }
+           /*/header*/
+           header{
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 25px;
+                    position: relative;
+                
+                }
+                header h1{
+                    color: orange;
+                    font-weight: bold;
+                    font-size: xx-large;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                .butn{
+                
+                    background-color:rgb(53, 233, 53);
+                    margin: 0;
+                    padding: 10px;
+                    font-weight: 900;
+                    color: white;
+                    font-size: large;  
+                    border-radius: 5px;
+                }
+                .butn:hover{
+                    cursor: pointer;
+                    color: black;
+                }
+                .nav-toggle{
+                    display: none;
+                }
+                .nav-toggle-label span,
+                .nav-toggle-label span::before,
+                .nav-toggle-label span::after {
+                display: block;
+                background: whitesmoke;
+                height: 2px;
+                width: 30px;
+                border-radius: 2px;
+                position: absolute;
+                right: 0;
+                top: 14px;
+                margin-left: 15px;
+                
+                }
+                .nav-toggle-label span::before,
+                .nav-toggle-label span::after {
+                content: '';
+                position: absolute;
+                
+                }
+
+                .nav-toggle-label span::before {
+                bottom: 7px;
+                }
+
+                .nav-toggle-label span::after {
+                top: 7px;
+                }
+                .nav-toggle:checked ~ .mobile-nav{
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                }
+                .mobile-nav{
+                    display: none;
+                    position: absolute;
+                    justify-content: center;
+                    top: 100%;
+                    font-size: large;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: black;
+                    width: 100%;
+                }
+                .mobile-nav ul { 
+                    list-style: none;
+                    }
+                .mobile-nav li{
+                        padding: 5px;
+                    }
+                .mobile-nav a{
+                    text-decoration: none;
+                    color: white;
+                    
+                }
+                @media screen and (max-width:800px){
+                    .butn{
+                        display: none;
+                    }
+                }
+                    @media screen and (min-width:800px) {
+                        .nav-toggle-label span,
+                        .nav-toggle-label::after,
+                        .nav-toggle-label::before{
+                            display: none;
+                            color: white;
+                        }
+
+                        .mobile-nav ul {
+                            display: none;
+                        }
+
+   
+                        
+                    }
+                    /*/nav*/
+                    
+    .nav{
+                    display: flex;
+                    justify-content:space-evenly;
+                    font-size: xx-large;
+                    background-color: black;
+                }
+                .nav a{
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+                }
+                a:hover{
+                    
+                    font-weight: bold;
+                    border-bottom: 5px solid orange;
+                
+                }
+                @media screen and (max-width:800px){
+                    .nav{display: none;}
+                    
+                }
+                #course{
+                    border-bottom: 5px solid orange;
+                }
+                
+        /*footer*/
+        .footer{
+                    background: rgb(15, 15, 15);
+                    color: white;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    text-transform: uppercase;
+                    
+                }
+                .footer-list{
+                    list-style: none;
+                    text-decoration: none;
+                    background: rgb(15, 15, 15);
+                    padding: 15px;
+
+                }
+                .footer-list li{
+                    padding: 15px;
+                    background: rgb(15, 15, 15);
+                }
+                .footer span{ background: rgb(15, 15, 15);}
+                .cardholder{
+                    display: flex;
+                    padding: 25px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction:row;
+                    flex-wrap: wrap;
+                }
+   
+</style>
+</head>
+<body>
+    <header>
+        <h1>THE-CHESS-WEBSITE</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="/index.html" id="home"> Home</a></li>
+                <li> <a href="" id="course">Courses</a></li>
+            <li> <a href="">News</a></li>
+            <li> <a href="">About us</a></li>
+        </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
+        <div>
+            <button class="butn">Sign UP!</button>
+        <button class="butn">LOGIN</button>
+        </div> 
+    </header> 
+    <br>
+    <nav class="nav"> 
+        <a href="/index.html" id="home">Home</a>
+             <a href="" id="course">Courses</a>
+            <a href="">About us</a>
+    </nav> <br> <br> <br><br><br><br> <hr> <br>
+  <h1 style="color: white; justify-content: center; align-items: center; padding-left: 50px; color: rgb(116, 191, 194); font-weight: 900;">Opening & Variations:</h1>
+<div class="cardholder" > 
+        <div class="card" style="width: 22rem; color: white; border: black 15px; margin: 50px;">
+            <img src="/e4.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold;">Openings With 1.E4</h4> <hr>
+                <p class="card-text">Learn how to open with the world's most favourite opening move.Learn basic positions and build a strong repertoire.</p>
+                <a href="#" class="btn btn-primary">Buy course at 15$ now!</a>
+            </div>
+      
+        </div>
+        <div class="card"  style="width: 22rem; color: white; border: black 15px; margin: 50px;">
+            <img src="/d4.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold;">Dynamite D4!</h4> <hr>
+                <p class="card-text">Blast your opponents with some aggresive style opening positions and repertoire starting with 1.D4!. <br></p>
+                <br><a href="#" class="btn btn-primary">Buy course at 15$ now!</a>
+         </div>
+         
+    </div>
+        <div class="card"  style="width: 22rem; color: white; border: black 15px; margin: 50px;">
+            <img src="/sicilian.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold;">The Sicilian Encyclopedia.</h4> <hr>
+                <p class="card-text">Learn to reply 1.E4 with the world class Sicilian defense and it's various variations.</p>
+                <br><a href="#" class="btn btn-primary">Buy course at 15$ now!</a>
+        </div>
+        
+    </div>
+        <div class="card" style="width: 22rem; color: white; border: black 15px; margin: 50px;">
+            <img src="/Caro.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h4 class="card-title" style="font-weight: bold;">The Caro-Kann Guide.</h4> <hr>
+                <p class="card-text">Learn to reply 1.E4 with the Caro-Kann defense and it's various variations.</p>
+            <br><br> <a href="#" class="btn btn-primary">Buy course at 15$ now!</a>
+        </div>
+        
+        </div>
+
+
+</div> <hr>
+<h1 style="color: white; justify-content: center; align-items: center; padding-left: 50px; font-weight: 900; color: rgb(116, 191, 194);">Gambits to spice things up:</h1>
+<div class="cardholder">
+    <div class="card" data-aos="fade-right" style="width: 350px; color: white; border: black 15px; margin: 100px;">
+        <img src="/gambits1.jpg" class="card-img-top" alt="...">
+            <div class="card-body"> <br>
+            <h4 class="card-title" style="font-weight: bold;">Gambits For 1.E4!</h4> <hr>
+            <p class="card-text">Surprise with spicy gambits for e4 for aggresive style play.For white and black both.</p>
+        <br><br> <br><a href="#" class="btn btn-primary">Buy course at 9.99$ now!</a>
+    </div>
+    
+    </div>
+    <div class="card" data-aos="fade-left" style="width: 350px; color: white; border: black 15px; margin: 100px;">
+        <img src="/gambits1.jpg" class="card-img-top" alt="...">
+            <div class="card-body"> <br>
+            <h4 class="card-title" style="font-weight: bold;">Gambits For 1.D4!.</h4> <hr> 
+            <p class="card-text">Surprise your opponents with gambits. Complete course for both white and black. <br></p>
+        <br><br><br><a href="#" class="btn btn-primary">Buy course at 9.99$ now!</a>
+    </div>
+    
+    </div>
+</div>
+<h1 style="color: white; justify-content: center; align-items: center; padding-left: 50px; font-weight: 900; color: rgb(116, 191, 194);">The Beginner Bootcamp:</h1>
+<div class="cardholder" data-aos="fade-right">    <div class="card" style="width: 33rem; color: white; border: black 15px; margin: 100px;">
+    <img src="/chess.jpg" class="card-img-top" alt="...">
+        <div class="card-body"> <br>
+        <h4 class="card-title" style="font-weight: bold;">The Beginner Bootcamp.</h4> <hr> 
+        <p class="card-text">New at Chess?Join our beginner bootcamp to take a forward leap in your game.Course includes basic openings and tactics! <br></p>
+    <br><br><br><a href="#" class="btn btn-primary">Buy course at 19.99$ now!</a>
+</div>
+
+</div></div>
+
+    
+
+
+
+    <footer class="footer" id="footer">
+       
+        <span>&#169 Copyright 2021 THE-CHESS-WEBSITE</span> <br>
+        <div>
+        <ul class="footer-list">contact us:<li>insta</li>
+        <li>mail</li>
+        <li>youtube</li></ul>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
+   
+</body>
+</html>
